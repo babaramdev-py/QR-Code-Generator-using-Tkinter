@@ -4,7 +4,9 @@ import pyqrcode
 from pyqrcode import QRCode
 import cairosvg
 import time
+import os
 
+CUR_DIR = os.getcwd()
 
 def CreateImg():
     # String which represent the QR code
@@ -18,7 +20,7 @@ def CreateImg():
     time.sleep(5)
     cairosvg.svg2png(url='myqr.svg', write_to='image.png')
     time.sleep(2)
-    im = Image.open(r"/home/ved/Desktop/QR_GEN/QRApp/image.png")
+    im = Image.open(CUR_DIR+"/image.png")
     im.show()
 
 
