@@ -17,9 +17,9 @@ def CreateImg():
 
     # Create and save the png file naming "myqr.png"
     url.svg("myqr.svg", scale=8)
-    time.sleep(5)
+    time.sleep(1)
     cairosvg.svg2png(url='myqr.svg', write_to='image.png')
-    time.sleep(2)
+    time.sleep(1)
     im = Image.open(CUR_DIR+"/image.png")
     im.show()
 
